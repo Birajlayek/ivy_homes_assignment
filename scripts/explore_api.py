@@ -1,4 +1,7 @@
-from src.api_client import APIClient
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+from api_client import APIClient
 
 def explore_api():
     api_client = APIClient("http://35.200.185.69:8000")
@@ -9,5 +12,4 @@ def explore_api():
         print(f"Query: {query}")
         print(api_client.get_autocomplete(query))
 
-if __name__ == "__main__":
-    explore_api()
+explore_api()

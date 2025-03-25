@@ -10,5 +10,4 @@ class APIClient:
         if response.status_code == 200:
             return response.json()
         else:
-            print(f"Error: Received status code {response.status_code} for query '{query}'")
             return None
